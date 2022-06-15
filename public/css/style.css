@@ -1,0 +1,59 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#start {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    background-color: grey;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#start:hover {
+    background-color: white;
+    border-color: black;
+    color: black;
+}
+
+#game_menu {
+    width: 500px;
+    height: 600px;
+    position: absolute;
+    transform: translate(-50%, 0%);
+    top: 0%;
+    left: 50%;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+#game_menu > h1{
+    line-height: 1.5;
+}
+
+
+#game {
+    width: 300px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    overflow: hidden;
+    position: relative;
+    background: url('../images/background.png') repeat-x;
+    background-size: contain;
+    animation: background-loop 0s linear infinite;
+}
+
+@keyframes background-loop {
+    100% {
+        background-position: -1000px 0;
+    }
+
+}
