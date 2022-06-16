@@ -11,7 +11,7 @@ function getRandomInt(min, max) {
 }
 
 /**
- * It stops the game
+ * It stops the game, and then it calls the restart_game_container() and reset_game() functions, which resets the game.
  */
 function game_over() {
     GAME_SPEED = 0;
@@ -19,5 +19,9 @@ function game_over() {
     clearInterval(ANIMATE_BIRD_ID);
     clearInterval(FLY_BIRD_ID);
     CONTAINER.style.animationDuration = `0s`;
-    console.log(SCORE);
+
+    setTimeout(() => {
+        GAME_MENU.restart_game_container();
+        GAME_MENU.reset_game();
+    }, START_END_DELAY);
 }

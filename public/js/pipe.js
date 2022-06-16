@@ -92,7 +92,7 @@ class Pipe {
     }
 
     /**
-     * It checks if the bird has collided with the top or bottom pipe, and if it has, it calls the game_over() function, which stops the game, and then it calls the restart_game_container() and reset_game() functions, which resets the game.
+     * It checks if the bird has collided with the top or bottom pipe, and if it has, it calls the game_over() function, which stops the game.
      */
     check_collision(){
         const top_pipe_current_x_position = parseInt(this.top_pipe.style.left);
@@ -120,10 +120,6 @@ class Pipe {
             (this.colision_condition_y_axis(flappy_bird_y, bottom_pipe_y))) 
         ) {
             game_over();
-            setTimeout(() => {
-                GAME_MENU.restart_game_container();
-                GAME_MENU.reset_game();
-            }, START_END_DELAY);
         }
         else if (top_pipe_x[1]+2===flappy_bird_x[0]){
             SCORE++;
